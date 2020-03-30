@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    
+<meta charset="UTF-8">
+
+<head>
+    <title>Binary to Decimal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Convert Binary number to Decimal number
+        </h1>
+    </div>
+    <div class="text">
+        <h2>Please input your number here &#128516;</h2>
+    </div>
+
+    <div class="form">
+        <form onsubmit="return false;" method="post" name="myForm">
+            <input  type="number" id="inputNumber" name="someNumber" required="true" >
+            <input type="submit" name="submit" onclick="convertToDec()">
+        </form>
+    </div>
+
+    <div class="result">
+        <p id="result"></p>
+    </div>
+    <script>
+        validate = function(number) {
+            if (number < 0 ) {
+                document.getElementById("result").innerHTML = "We don't play with negative";
+                return false;
+            }
+            var string_number = number.toString();
+            if (string_number.length > 8 ){
+                document.getElementById("result").innerHTML = "Input too long, only check maximum 8 digits";
+                return false;
+            }
+            var i = 0;
+            for (i; i < string_number.length; i++) {
+                if (string_number[i] != '0' && string_number[i] != '1') {
+                    document.getElementById("result").innerHTML = "Input is not a binary number";
+                    return false;
+                }
+            };
+            return true;
+        }
+        convertToDec = function() {
+            var number = document.getElementById("inputNumber").value;
+            var og_number = Object.assign(number);
+            if(!validate(number)) {
+                return;
+            };
+            var result = 0;
+            var counter = 0;
+            while (number > 0 ) {
+                var remainder = number % 10;
+                number = ~~(number / 10);
+                result += remainder * 2**counter;
+                counter ++;
+            };
+            document.getElementById("result").innerHTML = "Number " + og_number + " is " + result + " in Decimal";
+        }
+    </script>
+</body>
+</html>

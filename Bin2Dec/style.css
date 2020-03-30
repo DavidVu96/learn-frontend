@@ -1,0 +1,17 @@
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    color: tomato;
+}
+
+.form {
+    text-align: center;
+}
+
+.result {
+    text-align: center;
+}
