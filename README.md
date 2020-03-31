@@ -1,11 +1,10 @@
 # learn-frontend
-Collection of HTML CSS JS stuff, maybe will move toward React in future.....
 
+Collection of HTML CSS JS stuff, maybe will move toward React in future.....
 
 🌟 - Projects from [App Ideas](https://github.com/DavidVu96/app-ideas)
 
-
-### Tier-1: Beginner Projects
+## Tier-1: Beginner Projects
 
 |Status |Name                                                                              | Short Description                                          | Tier       |
 | ----- | -------------------------------------------------------------------------------  | ---------------------------------------------------------- | ---------- |
