@@ -4,6 +4,13 @@
 
 The border-radius property can have multiple values changed. Preview how the shape looks while changing these values.
 
+## Set up
+
+``` bash
+npm install
+npm run start:dev
+```
+
 ## User Stories
 
 - [ ] User can see a box which has a `border-radius` property applied to it
